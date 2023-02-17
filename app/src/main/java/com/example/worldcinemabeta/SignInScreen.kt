@@ -1,14 +1,15 @@
 package com.example.worldcinemabeta
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.GetChars
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 
 class SignInScreen : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in_screen)
@@ -18,7 +19,7 @@ class SignInScreen : AppCompatActivity() {
         val edSignEmail: EditText = findViewById(R.id.edSignEmail)
         val edSignPass: EditText = findViewById(R.id.edSignPass)
         val tvRegSi: TextView = findViewById(R.id.tvRegSi)
-        val tvSignSi: TextView = findViewById(R.id.tvSignSi)
+        val tvSign: TextView = findViewById(R.id.tvSign)
 
         tvRegSi.setOnClickListener {
             val intent = Intent(this@SignInScreen, SignUpScreen::class.java)
@@ -27,8 +28,7 @@ class SignInScreen : AppCompatActivity() {
 
 
         }
-        tvSignSi.setOnClickListener {
-            edSignEmail.setOnClickListener{
+        tvSign.setOnClickListener {
                 if(edSignEmail.text.isEmpty()||edSignPass.text.isEmpty()){
                     Toast.makeText(this@SignInScreen, "Не все поля заполнены." , Toast.LENGTH_LONG).show()
 
@@ -44,4 +44,3 @@ class SignInScreen : AppCompatActivity() {
             }
         }
     }
-}
