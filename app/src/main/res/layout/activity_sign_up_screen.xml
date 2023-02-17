@@ -7,4 +7,116 @@
     android:background="@color/Purplee"
     tools:context=".SignUpScreen">
 
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="251dp"
+        android:layout_height="176dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_svg" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/semibold"
+        android:text="WorldCinema"
+        android:textColor="@color/orangee"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <EditText
+        android:id="@+id/RegName"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/tvbg"
+        android:ems="10"
+        android:hint="Имя"
+        android:inputType="textPersonName"
+        android:paddingLeft="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/RegFam"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tvbg"
+        android:ems="10"
+        android:hint="Фамилия"
+        android:inputType="textPersonName"
+        android:paddingLeft="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/RegName"
+        app:layout_constraintStart_toStartOf="@+id/RegName"
+        app:layout_constraintTop_toBottomOf="@+id/RegName" />
+
+    <EditText
+        android:id="@+id/RegMail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tvbg"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/RegFam"
+        app:layout_constraintStart_toStartOf="@+id/RegFam"
+        app:layout_constraintTop_toBottomOf="@+id/RegFam" />
+
+    <EditText
+        android:id="@+id/RegPass"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/tvbg"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:paddingLeft="8sp"
+        app:layout_constraintEnd_toEndOf="@+id/RegMail"
+        app:layout_constraintStart_toStartOf="@+id/RegMail"
+        app:layout_constraintTop_toBottomOf="@+id/RegMail" />
+
+    <TextView
+        android:id="@+id/RegBack"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/tvbg"
+        android:fontFamily="@font/semibold"
+        android:gravity="center"
+        android:text="У меня уже есть аккаунт"
+        android:textColor="@color/orangee"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/RegCo"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/tvbg"
+        android:backgroundTint="@color/orangee"
+        android:fontFamily="@font/semibold"
+        android:gravity="center"
+        android:text="Зарегистрироваться"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/RegBack"
+        app:layout_constraintEnd_toEndOf="@+id/RegBack"
+        app:layout_constraintStart_toStartOf="@+id/RegBack" />
 </androidx.constraintlayout.widget.ConstraintLayout>

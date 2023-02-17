@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.GetChars
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 
 class SignInScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +24,24 @@ class SignInScreen : AppCompatActivity() {
             val intent = Intent(this@SignInScreen, SignUpScreen::class.java)
             startActivity(intent)
             this@SignInScreen.onResume()
+
+
+        }
+        tvSignSi.setOnClickListener {
+            edSignEmail.setOnClickListener{
+                if(edSignEmail.text.isEmpty()||edSignPass.text.isEmpty()){
+                    Toast.makeText(this@SignInScreen, "Не все поля заполнены." , Toast.LENGTH_LONG).show()
+
+                }
+                if(!edSignEmail.text.contains("@")){
+                    Toast.makeText(this@SignInScreen, "Неправильно указана почта." , Toast.LENGTH_LONG).show()
+
+                } else{
+                    val intent = Intent(this@SignInScreen, MainActivity::class.java)
+                    startActivity(intent)
+                    this@SignInScreen.finish()
+                }
+            }
         }
     }
 }

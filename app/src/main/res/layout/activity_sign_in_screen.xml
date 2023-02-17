@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/semibold"
-        android:text="World Cinema"
+        android:text="WorldCinema"
         android:textColor="@color/orangee"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
