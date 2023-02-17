@@ -115,6 +115,7 @@
         android:fontFamily="@font/semibold"
         android:gravity="center"
         android:text="Зарегистрироваться"
+        android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/RegBack"
         app:layout_constraintEnd_toEndOf="@+id/RegBack"
